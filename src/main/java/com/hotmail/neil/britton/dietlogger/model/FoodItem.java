@@ -12,12 +12,89 @@ public class FoodItem {
 	private @Id @GeneratedValue Long id;
 	@Column(name="name")
 	private String name;
+	private String units; //eg per 100g
+	private Double energy;
+	private Double protein;
+	private Double carbs;
+	private Double sugars;
+	private Double fats;
+	private Double saturates;
+	private Double sodium;
+	private Double fibre;
+	
+	public String getUnits() {
+		return units;
+	}
+	public void setUnits(String units) {
+		this.units = units;
+	}
+	public Double getEnergy() {
+		return energy;
+	}
+	public void setEnergy(Double energy) {
+		this.energy = energy;
+	}
+	public Double getProtein() {
+		return protein;
+	}
+	public void setProtein(Double protein) {
+		this.protein = protein;
+	}
+	public Double getCarbs() {
+		return carbs;
+	}
+	public void setCarbs(Double carbs) {
+		this.carbs = carbs;
+	}
+	public Double getSugars() {
+		return sugars;
+	}
+	public void setSugars(Double sugars) {
+		this.sugars = sugars;
+	}
+	public Double getFats() {
+		return fats;
+	}
+	public void setFats(Double fats) {
+		this.fats = fats;
+	}
+	public Double getSaturates() {
+		return saturates;
+	}
+	public void setSaturates(Double saturates) {
+		this.saturates = saturates;
+	}
+	public Double getSodium() {
+		return sodium;
+	}
+	public void setSodium(Double sodium) {
+		this.sodium = sodium;
+	}
+	public Double getFibre() {
+		return fibre;
+	}
+	public void setFibre(Double fibre) {
+		this.fibre = fibre;
+	}
 
+
+	
 	public FoodItem() {
 		
 	}
-	public FoodItem(String name) {
+	public FoodItem(String name, String units, Double energy, Double protein, 
+			Double carbs, Double sugars, Double fats, Double saturates, Double sodium, 
+			Double fibre) {
 		this.name = name;
+		this.units = units;
+		this.energy = energy;
+		this.protein = protein;
+		this.carbs = carbs;
+		this.sugars = sugars;
+		this.fats = fats;
+		this.saturates = saturates;
+		this.sodium = sodium;
+		this.fibre = fibre;
 	}
 
 	public String getName() {

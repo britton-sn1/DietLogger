@@ -11,7 +11,16 @@ import com.hotmail.neil.britton.dietlogger.model.FoodItem;
 public class LoadDatabase {
 
 	@Bean
-	  CommandLineRunner initDatabase(FoodItemRepository repository) {
-		return args -> repository.save(new FoodItem("Rice")); 
+	CommandLineRunner initDatabase(FoodItemRepository repository) {
+		return args -> repository.save(new FoodItem("Rice", "100g", 
+				Double.valueOf(29), // energy
+				Double.valueOf(278), // protein
+				Double.valueOf(728), // carbs
+				Double.valueOf(728), // sugars
+				Double.valueOf(6772), // fats
+				Double.valueOf(72), // saturates
+				Double.valueOf(0.378), // sodium
+				Double.valueOf(23) // fibre
+		));
 	}
 }
